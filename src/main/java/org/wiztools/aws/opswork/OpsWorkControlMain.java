@@ -8,6 +8,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Properties;
 import joptsimple.OptionException;
@@ -24,6 +26,18 @@ public class OpsWorkControlMain {
     private static final String CMD_STOP_STACK = "stop-stack";
     private static final String CMD_START_INSTANCE = "start-instance";
     private static final String CMD_STOP_INSTANCE = "stop-instance";
+    
+    private final static List<String> CMDS;
+    static {
+        List<String> l = new ArrayList<>();
+        
+        l.add(CMD_START_STACK);
+        l.add(CMD_STOP_STACK);
+        l.add(CMD_START_INSTANCE);
+        l.add(CMD_STOP_INSTANCE);
+        
+        CMDS = Collections.unmodifiableList(l);
+    }
     
     private static final int EXIT_CLI_ERROR = 1;
     private static final int EXIT_IO_ERROR = 2;
@@ -77,7 +91,7 @@ public class OpsWorkControlMain {
                 System.exit(EXIT_CLI_ERROR);
             }
             
-            if(command == null || !(command.equals(CMD_START_INSTANCE) || command.equals(CMD_STOP_INSTANCE))) {
+            if(command == null || !CMDS.contains(command)) {
                 System.err.println("Invalid command. You supplied: " + command);
                 printCommandLineHelp(System.err);
                 System.exit(EXIT_CLI_ERROR);
@@ -104,7 +118,7 @@ public class OpsWorkControlMain {
             }
             
             if(parameters.isEmpty()) {
-                System.err.println("Stack-id / Instance-id parameters is required.");
+                System.err.println("Stack-id / Instance-id parameter(s) are required.");
                 printCommandLineHelp(System.err);
                 System.exit(EXIT_CLI_ERROR);
             }
