@@ -98,15 +98,21 @@ public class OpsWorkControlMain {
                 }
             }
             
-            List<String> instances = new ArrayList<>();
+            List<String> parameters = new ArrayList<>();
             for(Object o: options.nonOptionArguments()) {
-                instances.add((String) o);
+                parameters.add((String) o);
+            }
+            
+            if(parameters.isEmpty()) {
+                System.err.println("Stack-id / Instance-id parameters is required.");
+                printCommandLineHelp(System.err);
+                System.exit(EXIT_CLI_ERROR);
             }
             
             AWSCredentials awsCreds = new BasicAWSCredentials(accessKey, secretKey);
             AWSOpsWorksClient client = new AWSOpsWorksClient(awsCreds);
             
-            OpsWorkControl control = new OpsWorkControl(client, instances);
+            OpsWorkControl control = new OpsWorkControl(client, parameters);
             
             switch (command) {
                 case CMD_START_STACK:
