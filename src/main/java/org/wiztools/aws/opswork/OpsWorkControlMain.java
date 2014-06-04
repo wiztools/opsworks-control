@@ -42,7 +42,7 @@ public class OpsWorkControlMain {
                 "  -h  Prints this help.\n";
         out.println(opts);
         
-        out.println("The parameters are either stack-ids or instance-ids (based on command).");
+        out.println("The parameters are either stack-ids or instance-ids (based on command).\n");
         
         String moreHelp = "Format of `aws-creds-file': \n"
                 + "\tAWSAccessKeyId=XXX\n"
