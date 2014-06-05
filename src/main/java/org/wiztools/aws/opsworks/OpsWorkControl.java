@@ -1,4 +1,4 @@
-package org.wiztools.aws.opswork;
+package org.wiztools.aws.opsworks;
 
 import com.amazonaws.services.opsworks.AWSOpsWorksClient;
 import com.amazonaws.services.opsworks.model.StartInstanceRequest;

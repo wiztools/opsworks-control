@@ -1,9 +1,9 @@
-# OpsWork Control
+# OpsWorks Control
 
-Command line tool to control OpsWork instances and stacks. Example usage:
+Command line tool to control AWS OpsWorks stacks and instances. Example usage:
 
 ```
-$ java -jar opswork-control-VER-jar-with-dependencies.jar \
+$ java -jar opsworks-control-VER-jar-with-dependencies.jar \
   -a aws-access-key \
   -s aws-secret-key \
   -c start-instance \
@@ -13,6 +13,6 @@ $ java -jar opswork-control-VER-jar-with-dependencies.jar \
 To know about command line options:
 
 ```
-$ java -jar opswork-control-VER-jar-with-dependencies.jar -h
+$ java -jar opsworks-control-VER-jar-with-dependencies.jar -h
 ```
 

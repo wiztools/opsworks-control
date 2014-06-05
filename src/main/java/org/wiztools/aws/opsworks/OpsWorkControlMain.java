@@ -1,4 +1,4 @@
-package org.wiztools.aws.opswork;
+package org.wiztools.aws.opsworks;
 
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
