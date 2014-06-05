@@ -44,7 +44,7 @@ public class OpsWorksControlMain {
     private static final int EXIT_SYS_ERROR = 4;
     
     private static void printCommandLineHelp(PrintStream out){
-        out.println("Usage: opswork-control [options] <parameters>");
+        out.println("Usage: opsworks-control [options] <parameters>");
         out.println("Where options are:");
         
         String opts =
