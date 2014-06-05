@@ -22,7 +22,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>org.wiztools.aws.opsworks.OpsWorkControlMain</mainClass>
+                            <mainClass>org.wiztools.aws.opsworks.OpsWorksControlMain</mainClass>
                         </manifest>
                         <manifestEntries>
                             <mode>development</mode>
