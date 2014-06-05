@@ -19,7 +19,7 @@ import joptsimple.OptionSet;
  *
  * @author subhash
  */
-public class OpsWorkControlMain {
+public class OpsWorksControlMain {
 
     private static final String CMD_START_STACK = "start-stack";
     private static final String CMD_STOP_STACK = "stop-stack";
@@ -125,7 +125,7 @@ public class OpsWorkControlMain {
             AWSCredentials awsCreds = new BasicAWSCredentials(accessKey, secretKey);
             AWSOpsWorksClient client = new AWSOpsWorksClient(awsCreds);
             
-            OpsWorkControl control = new OpsWorkControl(client, parameters);
+            OpsWorksControl control = new OpsWorksControl(client, parameters);
             
             switch (command) {
                 case CMD_START_STACK:

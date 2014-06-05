@@ -12,11 +12,11 @@ import java.util.List;
  *
  * @author subhash
  */
-public class OpsWorkControl {
+public class OpsWorksControl {
     private final AWSOpsWorksClient client;
     private final List<String> parameters;
 
-    public OpsWorkControl(AWSOpsWorksClient client, List<String> parameters) {
+    public OpsWorksControl(AWSOpsWorksClient client, List<String> parameters) {
         this.client = client;
         this.parameters = Collections.unmodifiableList(parameters);
     }
