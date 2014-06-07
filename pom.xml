@@ -11,6 +11,11 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     
+    <scm>
+        <connection>scm:git:https://github.com/wiztools/opsworks-control.git</connection>
+        <url>https://github.com/wiztools/opsworks-control</url>
+    </scm>
+    
     <build>
         <pluginManagement>
             <plugins>
