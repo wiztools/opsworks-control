@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wiztools</groupId>
     <artifactId>opsworks-control</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -15,7 +15,8 @@
         <connection>scm:git:https://github.com/wiztools/opsworks-control.git</connection>
         <developerConnection>scm:git:https://github.com/wiztools/opsworks-control.git</developerConnection>
         <url>https://github.com/wiztools/opsworks-control</url>
-    </scm>
+      <tag>opsworks-control-0.1.0</tag>
+  </scm>
     
     <build>
         <pluginManagement>
